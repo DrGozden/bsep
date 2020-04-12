@@ -24,7 +24,7 @@ public class KeyStoreWriter {
 	// - Tajni kljucevi, koji se koriste u simetricnima siframa
 	private KeyStore keyStore;
 
-	//@Value("${keyStore.password}")
+	@Value("${keyStore.password}")
 	private String keyStorePassword;
 
 	public KeyStoreWriter() {
