@@ -57,7 +57,13 @@ public class CertificateController {
 
 		return new ResponseEntity<>(HttpStatus.OK);
 	}
-
+	
+	@PutMapping("/revoke/store/{keyStoreFile}/cert/{id}")
+	public ResponseEntity<?> revokeCertificate(@PathVariable String keyStoreFile,
+			@PathVariable String id) throws CRLException, IOException, OperatorCreationException, ClassNotFoundException {
+		certificateService.revoke(keyStoreFile + ".jks", id);
+		return new ResponseEntity<>(HttpStatus.OK);
+	}
 	
 
 

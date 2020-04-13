@@ -9,10 +9,16 @@ angular.module('pki')
 				component: 'myCreateCertificate'
 			})
 			.state({
+				name: 'revoke',
+				url: '/revoke',
+				component: 'myRevoke'
+			})
+			.state({
 				name: 'error',
 				url: '/error',
 				template: '<h1>Error 404</h1>'
 			});
+			
 
 		$urlRouterProvider
 			.when('', '/create')
