@@ -90,8 +90,25 @@ public class CertificateServiceImpl implements CertificateService {
 
 		@Override
 		public boolean isValid(String keyStoreFile, String serialNumber) throws IOException, ClassNotFoundException {
-			// TODO Auto-generated method stub
-			return false;
+			X509Certificate cert = (X509Certificate) keyStoreReader.readCertificate(keyStoreFile, keyStorePassword, serialNumber);
+			//X509CRL crl = CRLUtils.openFromFile(crlFile);
+			FileInputStream fos = new FileInputStream(crlFile);
+			ObjectInputStream oos = new ObjectInputStream(fos);
+			ArrayList<X509Certificate> listCert = (ArrayList<X509Certificate>) oos.readObject();
+			oos.close();
+			try {
+			cert.checkValidity();
+			if(listCert.contains(cert))
+				return false;
+			else
+				return true;
+			}
+			catch (CertificateExpiredException e) {
+				return false;
+			}
+			catch (CertificateNotYetValidException e) {
+				return false;
+			}
 		}
 
 		@Override

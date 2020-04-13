@@ -65,6 +65,19 @@ public class CertificateController {
 		return new ResponseEntity<>(HttpStatus.OK);
 	}
 	
+	@GetMapping("/valid/store/{keyStoreFile}/cert/{id}")
+	public ResponseEntity<?> isValid(@PathVariable String keyStoreFile,
+			@PathVariable String id) throws ClassNotFoundException, IOException{
+		boolean valid = certificateService.isValid(keyStoreFile + ".jks", id);
+		HashMap<String, String> response = new HashMap<>();
+		if(valid) {
+			response.put("valid", "Certificate is valid" );
+		}
+		else {
+			response.put("valid", "Certificate is invalid" );
+		}
+		return new ResponseEntity<>(response, HttpStatus.OK);
+	}
 
 
 }
