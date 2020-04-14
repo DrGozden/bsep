@@ -4,5 +4,7 @@ angular.module('pki', [
 	'ui.router',
 	'header',
 	'create',
-	'revoke'
+	'get',
+	'revoke',
+	'status'
 ]);

@@ -78,6 +78,15 @@ public class CertificateController {
 		}
 		return new ResponseEntity<>(response, HttpStatus.OK);
 	}
+	
+	@GetMapping("/store/{keyStoreFile}/cert/{id}")
+	public ResponseEntity<?> getCertificate(@PathVariable String keyStoreFile,
+			@PathVariable String id) throws CertificateEncodingException {
+		Certificate cert = certificateService.get(keyStoreFile + ".jks", id);
+		HashMap<String, String> response = new HashMap<>();
+		response.put("certificate", Base64Utils.encodeToString(cert.getEncoded()));
+		return new ResponseEntity<>(response, HttpStatus.OK);
+	}
 
 
 }
