@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- CSS FILES-->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <!-- JS FILES -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="js/rentacar.js"></script>
+</head>
+<body>
+    <div class="container" id="loginPAGE">
+        <div class="row">
+            <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                <div class="card card-signin my-5 shadow-lg rounded-lg">
+
+                    <div class="card-body">
+                        <div class="row pb-3">
+                            <div class="col text-center bg-white">
+                                <img src="https://www.clipartkey.com/mpngs/m/65-651790_user-icon-login-logo.png" class="rounded-circle img-thumbnail w-25" alt="Login Logo">
+                            </div>
+                        </div>
+
+                        <form class="form-signin">
+
+                            <div class="form-label-group">
+                                <input type="text" id="loginUsername" class="form-control" placeholder="User name" required autofocus>
+                                <label for="loginUsername">User name</label>
+                            </div>
+
+                            <div class="form-label-group">
+                                <input type="password" id="loginPassword" class="form-control" placeholder="Password" required>
+                                <label for="loginPassword">Password</label>
+                            </div>
+
+                            <button class="btn btn-lg btn-primary btn-block text-uppercase rounded-pill" type="submit">Log in</button>
+                            <hr class="my-4">
+                        </form>
+                        <h4 class="card-title text-center">No account?</h4>
+                        <button class="btn btn-lg btn-outline-secondary btn-block text-uppercase rounded-pill" id="goToRegister">Register here</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="registerPAGE">
+    <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card card-signin flex-row my-5 my-5 shadow-lg rounded-lg">
+                <div class="card-body">
+                    <h5 class="card-title text-center p-2">Register</h5>
+                    <form class="form-signin">
+                        <div class="form-label-group">
+                            <input type="text" id="inputUserame" class="form-control" placeholder="Username" required
+                                   autofocus>
+                            <label for="inputUserame">Username</label>
+                        </div>
+
+                        <div class="form-label-group">
+                            <input type="email" id="inputEmail" class="form-control" placeholder="Email address"
+                                   required>
+                            <label for="inputEmail">Email address</label>
+                        </div>
+
+                        <hr>
+
+                        <div class="form-label-group">
+                            <input type="password" id="inputPassword" class="form-control" placeholder="Password"
+                                   required>
+                            <label for="inputPassword">Password</label>
+                        </div>
+
+                        <div class="form-label-group">
+                            <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Password"
+                                   required>
+                            <label for="inputConfirmPassword">Confirm password</label>
+                        </div>
+
+                        <button class="btn btn-lg btn-primary btn-block text-uppercase rounded-pill" type="submit">Register</button>
+                        <hr class="my-4">
+                    </form>
+                    <div class="text-center">
+                        <h4 class="card-title text-center">Already have an account?</h4>
+                        <button class="btn btn-lg btn-block btn-outline-info text-uppercase rounded-pill" id="goToLogin">Login here</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
