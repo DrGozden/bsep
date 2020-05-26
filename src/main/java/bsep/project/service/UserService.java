@@ -46,7 +46,7 @@ public class UserService {
 		u.setPassword(passwordEncoder.encode(userRequest.getPassword()));
 		u.setFirstName(userRequest.getFirstname());
 		u.setLastName(userRequest.getLastname());
-		//u.setEmail(userRequest.getE);
+		u.setEmail(userRequest.getEmail());
 		u.setEnabled(true);
 		
 		List<Authority> auth = authService.findByname("ROLE_USER");

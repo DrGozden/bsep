@@ -12,6 +12,8 @@ public class UserRequest {
 
 	private String lastname;
 
+	private String email;
+
 	public String getUsername() {
 		return username;
 	}
@@ -42,6 +44,14 @@ public class UserRequest {
 
 	public void setLastname(String lastname) {
 		this.lastname = lastname;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public Long getId() {
