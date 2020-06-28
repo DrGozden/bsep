@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Generate Certificate by CA</title>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/logout.js"></script>
+<script type="text/javascript" src="js/header.js"></script>
+<script type="text/javascript" src="js/certificate.js"></script>
+<link rel="stylesheet" type="text/css" href="css/index.css">
+
+</head>
+<body>
+
+<!-- toolbar -->
+<ul class="header">
+</ul>
+
+
+
+
+<div id="certificate_div">
+<form id="genCertificate">
+			<h3>
+					KeyStore
+					</h3>
+
+					<div>
+						<label>File name:</label>
+						<div>
+							<select id="fileName">
+
+							</select>
+						</div>
+					</div>
+
+					<div>
+						<label>Password:</label>
+						<div>
+							<input id = "password" type="password" name="password">
+						</div>
+					</div>	
+			<h3>
+				Generate Certificates For Users
+			</h3>
+				<div >
+					<label>Issuer:</label>
+					<div>
+						<select id="issuer">
+						</select>
+					</div>
+				</div>
+				
+				<div>
+						<label>Issuer key store password:</label>
+						<div>
+							<input id = "passwordIKS" type="password" name="passwordIKS">
+						</div>
+					</div>	
+				
+				<div>
+					<label>Alias:</label>
+				<div>
+					<input id="aliasGC" type="text" name="aliasGC">
+				</div>
+				</div>
+
+				<div>
+					<label>Serial number:</label>
+				<div>
+					<input id="serialNumberGC" type="text" name="serialNumberGC">
+				</div>
+					</div>
+
+					<div>
+						<label >Common name(CN):</label>
+					<div>
+						<input id="commonNameGC" type="text" name="commonNameGC">
+					</div>
+					</div>
+
+					<div>
+						<label>Organisation unit(OU):</label>
+					<div>
+						<input id="organisationUnitGC" type="text"  name="organisationUnitGC">
+					</div>
+					</div>
+
+					<div>
+						<label >Organisation name(O):</label>
+						<div>
+							<input id = "organisationNameGC" type="text" name="organisationNameGC">
+						</div>
+						</div>
+
+						<div>
+							<label >Locality name(L):</label>
+						<div>
+							<input id="localityNameGC" type="text" name="localityNameGC">
+						</div>
+							</div>
+
+							<div>
+								<label>State name(ST):</label>
+								<div>
+									<input id="stateNameGC" type="text" name="stateNameGC">
+								</div>
+							</div>
+
+							<div>
+								<label>Country(C):</label>
+								<div>
+									<input id="countryGC" type="text" name="countryGC">
+								</div>
+							</div>
+							<div>
+								<label>Validity(days):</label>
+								<div>
+									<input id = "validityTimeGC" type="number" name="validityTimeGC">
+								</div>
+							</div>
+							<div>
+								<label>Email(E):</label>
+								<div>
+									<input id="emailGC" type="email" name="emailGC">
+								</div>
+							</div>
+							<div>
+								<label>Purpose:</label>
+								<div>
+									<input id="purposeGC" type="text" name="purposeGC">
+								</div>
+							</div>
+							<br>
+							<input  id="genCFU" onclick="generateCFU()" type="button" value="Generate">
+				</form>
+</div>
+</body>
+</html>

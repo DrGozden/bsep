@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Load certificate</title>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/logout.js"></script>
+<script type="text/javascript" src="js/header.js"></script>
+<script type="text/javascript" src="js/load.js"></script>
+<link rel="stylesheet" type="text/css" href="css/index.css">
+
+</head>
+<body>
+
+<!-- toolbar -->
+<ul class="header">
+</ul>
+
+
+
+<div id="loadCertificate_div">
+<form id = "loadCertificate" method="post">
+	<h3>Load Certificate</h3>
+			<div>
+				<label>Certificate serial number: </label>
+			<div>
+			<div>
+				<input type="text" name="certificateDataSN" id = "certificateDataSN" style="width: 280px;">
+			</div>
+			</div>
+			</div>
+				<br>
+
+				<input  id="load" onclick="loadCertificate()" type="button" value="Load">
+	</form>
+	
+	<div id = "issuer"></div>
+	<div id = "subject"></div>
+	<div id = "version"></div>
+	<div id = "serialNumber"></div>
+	<div id = "sa"></div>
+	<div id = "type"></div>
+	<div id = "pk"></div>
+	
+	
+	
+	
+</div>
+
+</body>
+</html>

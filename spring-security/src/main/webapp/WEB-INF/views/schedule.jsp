@@ -1,5 +1,4 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -23,26 +22,19 @@
 <!-- Latest compiled and minified JavaScript -->
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
+<script src="<c:url value="/resources/js/global.js"/>"></script>
 </head>
 <body>
-	<jsp:include page="header.jsp" />
+	<jsp:include page="header.jsp"/>
 	<div class="container">
 		<div class="row">
-			<h1>Services</h1>
+			<h1>Employee Schedule</h1>
+			<ul class="list-group">
+				<li class="list-group-item">Kevin 8am - 4pm</li>
+				<li class="list-group-item">Joey 7am - 3pm</li>
+				<li class="list-group-item">Gary 10am - 1pm</li>					
+			</ul>
 		</div>
-	<c:url var="loginVar" value="/login"></c:url>
-		<form id="appointment-form" method="POST" action="${loginVar}">
-			<div class="form-group">
-				<label for="make">Username</label>
-				<input name="custom_username" class="form-control" />
-			</div>
-			<div class="form-group">
-				<label for="model">Password</label>
-				<input type="password" name="custom_password" class="form-control" />
-			</div>
-			<button type="submit" id="btn-save" class="btn btn-primary">Login</button>
-		</form>
 	</div>
 </body>
 </html>
